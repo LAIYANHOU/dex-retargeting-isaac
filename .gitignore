@@ -15,4 +15,4 @@ imgui.ini
 /.idea
 /log
 /temp/
-*.egg-info
+*.egg-infovenv-retarget/
