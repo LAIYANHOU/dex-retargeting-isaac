@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="thumb">
+  <link
+    name="motor_link">
+    <inertial>
+      <origin
+        xyz="4.51760295610751E-06 -0.00694199680082334 -0.0142822046034371"
+        rpy="0 0 0" />
+      <mass
+        value="0.0158646274909369" />
+      <inertia
+        ixx="1.5923173088897E-06"
+        ixy="1.37851939825468E-09"
+        ixz="-8.3976983238553E-11"
+        iyy="6.5414664527114E-07"
+        iyz="-2.6599064191085E-09"
+        izz="1.85412894058664E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/motor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/motor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_pip_link">
+    <inertial>
+      <origin
+        xyz="4.95760791597358E-19 -0.00189387734659092 3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.00160614735192622" />
+      <inertia
+        ixx="1.43117938640444E-07"
+        ixy="-5.55047285060956E-24"
+        ixz="1.34800551484166E-23"
+        iyy="1.97543341584057E-07"
+        iyz="1.65264505121979E-23"
+        izz="6.03730302729034E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/thumb_pip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/thumb_pip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_pip_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.0275 -0.014500000000011"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="motor_link" />
+    <child
+      link="thumb_pip_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="connect_link">
+    <inertial>
+      <origin
+        xyz="0.00411765424561172 -0.0148300279082091 0.01775"
+        rpy="0 0 0" />
+      <mass
+        value="0.00557866650364624" />
+      <inertia
+        ixx="1.54542696836901E-06"
+        ixy="-1.85486908918896E-07"
+        ixz="-3.90819007565849E-23"
+        iyy="7.02952909902168E-07"
+        iyz="1.68799065159474E-22"
+        izz="1.09293721480962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/connect_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/connect_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="connect_joint"
+    type="fixed">
+    <origin
+      xyz="-0.008 0 0.01775"
+      rpy="-3.14159265358979 0 0" />
+    <parent
+      link="thumb_pip_link" />
+    <child
+      link="connect_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sensor_Link">
+    <inertial>
+      <origin
+        xyz="5.45305664510776E-06 0.0133276953142146 -5.04567791665567E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0178822084321402" />
+      <inertia
+        ixx="1.17533922867296E-06"
+        ixy="4.11691121828177E-12"
+        ixz="-2.43893955468406E-11"
+        iyy="2.53546070357286E-06"
+        iyz="-2.92731616575703E-09"
+        izz="1.78912273854956E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/sensor_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://thumb/meshes/sensor_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sensor_joint"
+    type="fixed">
+    <origin
+      xyz="0.003 -0.02575 0.01775"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="connect_link" />
+    <child
+      link="sensor_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

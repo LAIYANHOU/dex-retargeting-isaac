@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wrq_test">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.30775881777349E-08 -2.78485178337706E-08 -3.45429553498711E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.19343663145282E-11" />
+      <inertia
+        ixx="1.24711139664769E-20"
+        ixy="7.42950023163627E-24"
+        ixz="5.88640924069087E-24"
+        iyy="1.2348284600344E-20"
+        iyz="1.20366607892646E-24"
+        izz="2.45159569221095E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://denso_robot_description/meshes/wrq_test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://denso_robot_description/meshes/wrq_test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="palm_Link">
+    <inertial>
+      <origin
+        xyz="5.67162269581684E-06 -6.06782478183846E-06 -2.39718018696586E-05"
+        rpy="0 0 0" />
+      <mass
+        value="9.71232661681929E-13" />
+      <inertia
+        ixx="8.41900413941211E-23"
+        ixy="2.53363645294035E-26"
+        ixz="-1.10409664574448E-25"
+        iyy="8.41895371604218E-23"
+        iyz="7.23039495175542E-27"
+        izz="2.53544897622049E-24" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://denso_robot_description/meshes/wrq_test/meshes/palm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://denso_robot_description/meshes/wrq_test/meshes/palm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palm_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palm_Link" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-999"
+      upper="999"
+      effort="999"
+      velocity="999" />
+    <safety_controller
+      soft_upper_limit="999"
+      soft_lower_limit="-999"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+</robot>

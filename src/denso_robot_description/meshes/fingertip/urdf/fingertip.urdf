@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="fingertip">
+  <link
+    name="fingertip_link">
+    <inertial>
+      <origin
+        xyz="-1.0655850317732E-16 -0.0109741570274734 0.0150901141320541"
+        rpy="0 0 0" />
+      <mass
+        value="0.00278690516682408" />
+      <inertia
+        ixx="5.70610348662554E-07"
+        ixy="5.32605700013683E-23"
+        ixz="2.61327802478686E-21"
+        iyy="5.38152556216172E-07"
+        iyz="5.3398575655495E-10"
+        izz="2.16140653173196E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/fingertip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/fingertip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="connect_link">
+    <inertial>
+      <origin
+        xyz="0.00411765424561172 -0.0148300279082091 0.01775"
+        rpy="0 0 0" />
+      <mass
+        value="0.00557866650364624" />
+      <inertia
+        ixx="1.54542696836901E-06"
+        ixy="-1.85486908918896E-07"
+        ixz="-6.19707771930058E-23"
+        iyy="7.02952909902168E-07"
+        iyz="1.81104669703813E-22"
+        izz="1.09293721480962E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/connect_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/connect_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="connect_joint"
+    type="fixed">
+    <origin
+      xyz="0.00799999999999977 -0.017 0.03275"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="fingertip_link" />
+    <child
+      link="connect_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sensor_link">
+    <inertial>
+      <origin
+        xyz="5.45305625092307E-06 0.0133276953059359 -5.04567839394641E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0178822084472653" />
+      <inertia
+        ixx="1.1753392286897E-06"
+        ixy="4.11684437840315E-12"
+        ixz="-2.43892475858933E-11"
+        iyy="2.53546070358439E-06"
+        iyz="-2.92731609599382E-09"
+        izz="1.78912273862224E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/sensor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fingertip/meshes/sensor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sensor_joint"
+    type="fixed">
+    <origin
+      xyz="0.00300000000000001 -0.02575 0.01775"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="connect_link" />
+    <child
+      link="sensor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="palm__lower">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.3078E-08 -2.7849E-08 -3.4543E-06"
+        rpy="0 0 0" />
+      <mass
+        value="3.1934E-11" />
+      <inertia
+        ixx="1.2471E-20"
+        ixy="7.4295E-24"
+        ixz="5.8864E-24"
+        iyy="1.2348E-20"
+        iyz="1.2037E-24"
+        izz="2.4516E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://denso_robot_description/meshes/palm_lower/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://denso_robot_description/meshes/palm_lower/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="palm_Link">
+    <inertial>
+      <origin
+        xyz="5.6716E-06 -6.0678E-06 -2.3972E-05"
+        rpy="0 0 0" />
+      <mass
+        value="9.7123E-13" />
+      <inertia
+        ixx="8.419E-23"
+        ixy="2.5336E-26"
+        ixz="-1.1041E-25"
+        iyy="8.419E-23"
+        iyz="7.2304E-27"
+        izz="2.5354E-24" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://denso_robot_description/meshes/palm_lower/meshes/palm_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://denso_robot_description/meshes/palm_lower/meshes/palm_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="palm_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="palm_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
