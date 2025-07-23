@@ -1,18 +1,61 @@
-build
-.vscode
-.pyc
-*.blend
-cmake-build-debug
-/cmake-build-debug/
-/.ccls-cache/
-/.dir-locals.el
-__pycache__
-.ini
+# ===================
+# General
+# ===================
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dylib
+*.dll
+__pycache__/
+*.log
+*.ini
+*.DS_Store
+*.egg-info/
+*.npy
+*.npz
+*.pth
+*.onnx
+
+# ===================
+# Virtual Environments
+# ===================
+venv/
+venv-*/
+.venv/
+env/
+env-*/
+.venv-retarget/
+venv-retarget/
+
+# ===================
+# CMake / Build Systems
+# ===================
+build/
+install/
+devel/
+cmake-build-debug/
+.ccls-cache/
+.idea/
+.vscode/
+
+# ===================
+# Isaac Sim Specific
+# ===================
+log/
+logs/
+output/
+tmp/
+.temp/
+*.usd
+*.usd.cache/
 *.convex.*
+*.blend
 imgui.ini
-.mypy_cache
-.DS_Store
-/.idea
-/log
-/temp/
-*.egg-infovenv-retarget/
+.mypy_cache/
+
+# ===================
+# Editor / Dev Tools
+# ===================
+.dir-locals.el
+
